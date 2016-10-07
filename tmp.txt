@@ -1,0 +1,2 @@
+$ar = new App\Role();$ar = $ar->where(['name'=>'admin'])->get()->first();$mp = new App\Permission();$mp = $mp->where(['name'=>'manage-category'])->get()->first();$ar->attachPermission($mp);
+$ar = new App\Role();$ar = $ar->where(['name'=>'manage'])->get()->first();$mp = new App\Permission();$mp = $mp->where(['name'=>'create-category'])->get()->first();$ar->attachPermission($mp);
